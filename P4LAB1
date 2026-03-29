@@ -1,0 +1,33 @@
+import turtle
+
+# 1. Setup the screen and turtle
+screen = turtle.Screen()
+screen.bgcolor("skyblue")  # Changed background color
+
+t = turtle.Turtle()
+t.color("darkgreen")       # Changed turtle color
+t.pensize(3)
+t.speed(3)
+
+# 2. Draw the Square (using a FOR loop)
+# A square has 4 equal sides
+for i in range(4):
+    t.forward(100)
+    t.left(90)
+
+# 3. Move the turtle to the top of the square
+# We need to get to the top-left corner to start the roof
+t.left(90)
+t.forward(100)
+t.right(90)
+
+# 4. Draw the Triangle / Roof (using a WHILE loop)
+# An equilateral triangle has 3 sides
+sides_drawn = 0
+while sides_drawn < 3:
+    t.forward(100)
+    t.left(120)
+    sides_drawn += 1
+
+# Keep the window open until clicked
+screen.exitonclick()
